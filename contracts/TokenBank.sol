@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.7.4 <0.8.0;
 
-contract Timelock {
+contract TokenBank {
 
   mapping (address => mapping (address => uint)) public balances;
 
