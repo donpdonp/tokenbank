@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.7.4 <0.8.0;
 
-import "./SafeMath.sol";
+import "../std/SafeMath.sol";
 import "./ERC20.sol";
 
 /**
