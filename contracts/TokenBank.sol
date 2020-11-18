@@ -13,9 +13,5 @@ contract TokenBank {
     require(amount <= balances[msg.sender][erc20], "insufficient balance for erc20 token");
     balances[msg.sender][erc20] -= amount;
   }
-
-  function balance(address erc20) external view returns (uint256) {
-    return balances[msg.sender][erc20];
-  }
 }
 
