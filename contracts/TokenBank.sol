@@ -9,8 +9,8 @@ contract TokenBank {
 
   function addCoin(address erc20, uint256 amount) public {
     ERC20 token = ERC20(erc20);
-    token.transferFrom(msg.sender, address(this), amount);
     balances[msg.sender][erc20] += amount;
+    token.transferFrom(msg.sender, address(this), amount);
   }
 
   function totalBalance(address erc20) public view returns (uint256) {
@@ -22,6 +22,8 @@ contract TokenBank {
   function takeCoin(address erc20, uint256 amount) public {
     require(amount <= balances[msg.sender][erc20], "insufficient balance for erc20 token");
     balances[msg.sender][erc20] -= amount;
+    ERC20 token = ERC20(erc20);
+    token.transfer(msg.sender, amount);
   }
 }
 
