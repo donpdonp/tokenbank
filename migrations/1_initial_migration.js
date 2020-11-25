@@ -1,7 +1,7 @@
 const Migrations = artifacts.require("Migrations");
-const TL = artifacts.require("Timelock");
+const contract = artifacts.require("TokenBank");
 
 module.exports = function(deployer) {
   deployer.deploy(Migrations);
-  deployer.deploy(TL);
+  deployer.deploy(contract);
 };
