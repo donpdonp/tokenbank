@@ -1,7 +1,7 @@
 all:
-	~/projects/truffle/node_modules/.bin/truffle compile
+	truffle compile
 deploy:
-	~/projects/truffle/node_modules/.bin/truffle deploy
+	truffle deploy
 console:
-	~/projects/truffle/node_modules/.bin/truffle console
+	truffle console
 
